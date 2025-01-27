@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assessment and Feedback</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .feedback {
+      display: none;
+      margin-top: 10px;
+    }
+
+    input[type="radio"]:checked + label + .feedback {
+      display: block;
+    }
+
+    .feedback.correct {
+      color: green;
+    }
+
+    .feedback.incorrect {
+      color: red;
+    }
+
+    .question {
+      margin-bottom: 30px;
+    }
+
+    .back-button {
+      display: block;
+      width: 200px;
+      margin: 30px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #007BFF;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #0056b3;
+    }
+
+    .read-about-it {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #007BFF;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .read-about-it:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<h1>Assessment and Feedback</h1>
+<hr>
+
+<!-- Question 1 -->
+<div id=q1 class="question">
+  <h3>What does HTML stand for?</h3>
+  <input type="radio" id="q1a1" name="q1" />
+  <label for="q1a1">HyperText Markup Language</label>
+  <div class="feedback correct"><strong>Correct!</strong> HTML stands for HyperText Markup Language.</div>
+
+  <input type="radio" id="q1a2" name="q1" />
+  <label for="q1a2">HighTech Markup Language</label>
+  <div class="feedback incorrect">
+    <strong>Incorrect.</strong> It does not mean HighTech Markup Language.
+    <a href="index.html#html" class="read-about-it">Read About It</a>
+  </div>
+
+  <input type="radio" id="q1a3" name="q1" />
+  <label for="q1a3">HyperText Machine Language</label>
+  <div class="feedback incorrect">
+    <strong>Incorrect.</strong> It does not mean HyperText Machine Language.
+    <a href="index.html#html" class="read-about-it">Read About It</a>
+  </div>
+</div>
+
+<!-- Question 2 -->
+<div id=q2 class="question">
+  <h3>What is the purpose of CSS?</h3>
+  <input type="radio" id="q2a1" name="q2" />
+  <label for="q2a1">To structure HTML documents.</label>
+  <div class="feedback incorrect">
+    <strong>Incorrect.</strong> Structuring HTML is the job of HTML itself, not CSS.
+    <a href="index.html#css" class="read-about-it">Read About It</a>
+  </div>
+
+  <input type="radio" id="q2a2" name="q2" />
+  <label for="q2a2">To style and layout HTML elements.</label>
+  <div class="feedback correct"><strong>Correct!</strong> CSS is used to style and layout HTML elements.</div>
+
+  <input type="radio" id="q2a3" name="q2" />
+  <label for="q2a3">To write scripts for web pages.</label>
+  <div class="feedback incorrect">
+    <strong>Incorrect.</strong> Writing scripts for web pages is the role of JavaScript.
+    <a href="index.html#css" class="read-about-it">Read About It</a>
+  </div>
+</div>
+
+<!-- Question 3 -->
+<div id=q3 class="question">
+  <h3>What is semantic HTML?</h3>
+  <input type="radio" id="q3a1" name="q3" />
+  <label for="q3a1">HTML that uses comments for developers.</label>
+  <div class="feedback incorrect">
+    <strong>Incorrect.</strong> Semantic HTML goes beyond comments for developers.
+    <a href="index.html#semantic-html" class="read-about-it">Read About It</a>
+  </div>
+
+  <input type="radio" id="q3a2" name="q3" />
+  <label for="q3a2">HTML that uses meaningful tags to improve accessibility.</label>
+  <div class="feedback correct"><strong>Correct!</strong> Semantic HTML uses meaningful tags to improve accessibility and readability.</div>
+
+  <input type="radio" id="q3a3" name="q3" />
+  <label for="q3a3">HTML that is machine-readable only.</label>
+  <div class="feedback incorrect">
+    <strong>Incorrect.</strong> Semantic HTML is human-readable as well.
+    <a href="index.html#semantic-html" class="read-about-it">Read About It</a>
+  </div>
+</div>
+<!-- Question 4 -->
+<div id=q4 class="question">
+  <h3>Which tag is used to define metadata?</h3>
+  <input type="radio" id="q4a1" name="q4" />
+  <label for="q4a1">&lt;meta&gt;</label>
+  <div class="feedback correct"><strong>Correct!</strong> The &lt;meta&gt; tag is used to define metadata in an HTML document.</div>
+
+  <input type="radio" id="q4a2" name="q4" />
+  <label for="q4a2">&lt;title&gt;</label>
+  <div class="feedback incorrect">
+    <strong>Incorrect.</strong> The &lt;title&gt; tag defines the title of the document, not metadata.
+    <a href="index.html#metadata" class="read-about-it">Read About It</a>
+  </div>
+
+  <input type="radio" id="q4a3" name="q4" />
+  <label for="q4a3">&lt;header&gt;</label>
+  <div class="feedback incorrect">
+    <strong>Incorrect.</strong> The &lt;header&gt; tag defines a section header, not metadata.
+    <a href="index.html#metadata" class="read-about-it">Read About It</a>
+  </div>
+</div>
+
+<!-- Question 5 -->
+<div id=q5 class="question">
+  <h3>What is the purpose of the &lt;body&gt; tag?</h3>
+  <input type="radio" id="q5a1" name="q5" />
+  <label for="q5a1">To define the document’s metadata.</label>
+  <div class="feedback incorrect">
+    <strong>Incorrect.</strong> The &lt;body&gt; tag does not define metadata; that's the &lt;meta&gt; tag's job.
+    <a href="index.html#body" class="read-about-it">Read About It</a>
+  </div>
+
+  <input type="radio" id="q5a2" name="q5" />
+  <label for="q5a2">To contain the visible content of the page.</label>
+  <div class="feedback correct"><strong>Correct!</strong> The &lt;body&gt; tag contains the visible content of the page.</div>
+
+  <input type="radio" id="q5a3" name="q5" />
+  <label for="q5a3">To structure the head section of the document.</label>
+  <div class="feedback incorrect">
+    <strong>Incorrect.</strong> The &lt;body&gt; tag does not structure the head section; that’s the role of the &lt;head&gt; tag.
+    <a href="index.html#body" class="read-about-it">Read About It</a>
+  </div>
+</div>
+`
+
+<hr>
+
+<!-- Back Button -->
+<a href="index.html" class="back-button">Back to Lesson Page</a>
+
+<p style="text-align: center; font-size: 0.9em;">&copy; 2025 Dylan Flaum</p>
+</body>
+</html>
