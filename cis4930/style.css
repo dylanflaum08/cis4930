@@ -112,3 +112,85 @@ th {
     color: red;
     font-weight: bold;
 }
+
+/* Form Styling */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #1a1a1a;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+label, legend {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+button {
+    width: 48%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+button[type="reset"] {
+    background-color: #d9534f;
+    color: white;
+}
+
+button[type="button"] {
+    background-color: #007BFF;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+fieldset {
+    border: 1px solid #666;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#result {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #00FF00;
+}
+
+@media screen and (max-width: 600px) {
+    form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    input, select {
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
