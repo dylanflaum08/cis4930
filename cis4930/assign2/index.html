@@ -12,11 +12,11 @@
 <p>Fill out the form below to get a game recommendation based on your preferences!</p>
 
 <form id="gameForm">
-    <!-- Textbox for Name -->
+
     <label for="name">Your Name:</label>
     <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-    <!-- Radio Buttons for Game Genre -->
+
     <fieldset>
         <legend>What is your favorite game genre?</legend>
         <label><input type="radio" name="genre" value="Action"> Action</label>
@@ -26,7 +26,7 @@
         <label><input type="radio" name="genre" value="Adventure"> Adventure</label>
     </fieldset>
 
-    <!-- Checkboxes for Platforms -->
+
     <fieldset>
         <legend>Which platforms do you play on? (Select all that apply)</legend>
         <label><input type="checkbox" name="platform" value="PC"> PC</label>
@@ -36,7 +36,7 @@
         <label><input type="checkbox" name="platform" value="Mobile"> Mobile</label>
     </fieldset>
 
-    <!-- Dropdown for Playtime per Week -->
+
     <label for="playtime">How many hours do you play per week?</label>
     <select id="playtime" name="playtime">
         <option value="less than 5">Less than 5 hours</option>
@@ -45,19 +45,21 @@
         <option value="20+">20+ hours</option>
     </select>
 
-    <!-- Textbox for Age -->
+
     <label for="age">Enter your age:</label>
     <input type="text" id="age" name="age" placeholder="e.g., 21" required>
 
-    <!-- Reset and Submit Buttons -->
+
     <button type="reset">Reset</button>
     <button type="button" onclick="recommendGame()">Get Recommendation</button>
 </form>
 
-<!-- Section to Display the Results -->
+
 <div id="result" style="margin-top: 20px;"></div>
 <h2>Flowchart of the Decision Process</h2>
 <img src="flowchart.png" alt="Flowchart of Video Game Recommendation Logic" style="max-width: 100%; display: block; margin: auto;">
+
+<a href="../index.html" class="back-button">Back to Portfolio</a>
 
 <script src="script.js"></script>
 </body>
