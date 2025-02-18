@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 3 - Test Results</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<h1>Unit Testing for Statistical Calculator</h1>
+<p>Below are the results of unit tests using three different datasets, including boundary conditions. The expected results were calculated manually or verified using a spreadsheet.</p>
+
+<table border="1">
+  <tr>
+    <th>Dataset</th>
+    <th>Expected Mean</th>
+    <th>Computed Mean</th>
+    <th>Expected Median</th>
+    <th>Computed Median</th>
+    <th>Expected Std Dev</th>
+    <th>Computed Std Dev</th>
+  </tr>
+  <tr>
+    <td id="dataset1">-100, -50, 0, 50, 100</td>
+    <td>0</td>
+    <td id="test1Mean"></td>
+    <td>0</td>
+    <td id="test1Median"></td>
+    <td>79.06</td>
+    <td id="test1SD"></td>
+  </tr>
+  <tr>
+    <td id="dataset2">1, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10</td>
+    <td>5</td>
+    <td id="test2Mean"></td>
+    <td>5</td>
+    <td id="test2Median"></td>
+    <td>3.06</td>
+    <td id="test2SD"></td>
+  </tr>
+  <tr>
+    <td id="dataset3">1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000</td>
+    <td>5500</td>
+    <td id="test3Mean"></td>
+    <td>5500</td>
+    <td id="test3Median"></td>
+    <td>3027.65</td>
+    <td id="test3SD"></td>
+  </tr>
+</table>
+
+<button onclick="goToChartsPage()">Back to Charts Page</button>
+
+<script>
+  function goToChartsPage() {
+    window.location.href = "index.html";
+  }
+
+  function runUnitTests() {
+    let dataset1 = [-100, -50, 0, 50, 100];
+    let dataset2 = [1, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let dataset3 = [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000];
+
+    document.getElementById("test1Mean").textContent = findMean(dataset1).toFixed(2);
+    document.getElementById("test1Median").textContent = findMedian(dataset1);
+    document.getElementById("test1SD").textContent = findStandardDeviation(dataset1).toFixed(2);
+
+    document.getElementById("test2Mean").textContent = findMean(dataset2).toFixed(2);
+    document.getElementById("test2Median").textContent = findMedian(dataset2);
+    document.getElementById("test2SD").textContent = findStandardDeviation(dataset2).toFixed(2);
+
+    document.getElementById("test3Mean").textContent = findMean(dataset3).toFixed(2);
+    document.getElementById("test3Median").textContent = findMedian(dataset3);
+    document.getElementById("test3SD").textContent = findStandardDeviation(dataset3).toFixed(2);
+  }
+
+  window.onload = runUnitTests;
+</script>
+<script src="statistics.js"></script>
+</body>
+</html>

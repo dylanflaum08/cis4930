@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistical Calculator</title>
+    <link rel="stylesheet" href="../style.css"> <!-- Link to your previous stylesheet -->
+    <script src="statistics.js" defer></script>
+</head>
+<body>
+<h1>Statistical Calculator</h1>
+<p>Enter a list of numbers separated by spaces or commas, then click "Calculate" to compute statistics.</p>
+
+<form id="statsForm">
+    <label for="numbers">Enter numbers:</label>
+    <textarea id="numbers" rows="5" cols="50" placeholder="e.g., 10, 20, 30, 40"></textarea>
+    <br>
+    <button type="button" onclick="processNumbers()">Calculate</button>
+</form>
+
+<h2>Results:</h2>
+<p><strong>Count (N):</strong> <span id="outputN"></span></p>
+<p><strong>Sum:</strong> <span id="outputSum"></span></p>
+<p><strong>Mean:</strong> <span id="outputMean"></span></p>
+<p><strong>Median:</strong> <span id="outputMedian"></span></p>
+<p><strong>Mode:</strong> <span id="outputMode"></span></p>
+<p><strong>Maximum:</strong> <span id="outputMax"></span></p>
+<p><strong>Minimum:</strong> <span id="outputMin"></span></p>
+<p><strong>Range:</strong> <span id="outputRange"></span></p>
+<p><strong>Interquartile Range:</strong> <span id="outputIQR"></span></p>
+<p><strong>Variance:</strong> <span id="outputVariance"></span></p>
+<p><strong>Standard Deviation:</strong> <span id="outputSD"></span></p>
+<p><strong>Skewness:</strong> <span id="outputSkewness"></span></p>
+<p><strong>Kurtosis:</strong> <span id="outputKurtosis"></span></p>
+<h2>Data Visualization</h2>
+
+
+<div id="chartContainer1">
+    <canvas id="histogramChart" width="400" height="200"></canvas>
+</div>
+<div id="chartContainer2">
+    <canvas id="lineChart" width="400" height="200"></canvas>
+</div>
+<div id="chartContainer3">
+    <canvas id="pieChart" width="400" height="200"></canvas>
+</div>
+<button onclick="goToPortfolio()">Back to Portfolio</button>
+<button onclick="goToTestResults()">View Test Results</button>
+
+
+
+<script src="visualization.js"></script>
+
+</body>
+</html>
