@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="gameApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Game Recommendation (W3.CSS + AngularJS)</title>
+
+    <!-- W3.CSS for Styling -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="w3-container w3-dark-grey">
+
+<div class="w3-content w3-padding w3-card w3-light-grey w3-round-large" style="max-width: 600px;" ng-controller="GameController">
+    <h2 class="w3-center">Personalized Video Game Recommendation</h2>
+    <p class="w3-center">Fill out the form below to get a game recommendation!</p>
+
+    <form class="w3-padding">
+
+        <!-- Name Input -->
+        <label class="w3-text-black">Your Name:</label>
+        <input type="text" class="w3-input w3-border" ng-model="user.name" placeholder="Enter your name" required>
+
+        <!-- Game Genre Selection -->
+        <label class="w3-text-black">Favorite Game Genre:</label>
+        <select class="w3-select w3-border" ng-model="user.genre" required>
+            <option value="">Select a genre</option>
+            <option value="Action">Action</option>
+            <option value="RPG">RPG</option>
+            <option value="Shooter">Shooter</option>
+            <option value="Horror">Horror</option>
+            <option value="Adventure">Adventure</option>
+        </select>
+
+        <!-- Platform Selection -->
+        <label class="w3-text-black">Which platforms do you play on?</label>
+        <div class="w3-row">
+            <label class="w3-col s6"><input type="checkbox" ng-model="user.platforms.PC"> PC</label>
+            <label class="w3-col s6"><input type="checkbox" ng-model="user.platforms.PlayStation"> PlayStation</label>
+            <label class="w3-col s6"><input type="checkbox" ng-model="user.platforms.Xbox"> Xbox</label>
+            <label class="w3-col s6"><input type="checkbox" ng-model="user.platforms.Nintendo"> Nintendo</label>
+            <label class="w3-col s6"><input type="checkbox" ng-model="user.platforms.Mobile"> Mobile</label>
+        </div>
+
+        <!-- Playtime Dropdown -->
+        <label class="w3-text-black">How many hours do you play per week?</label>
+        <select class="w3-select w3-border" ng-model="user.playtime">
+            <option value="less than 5">Less than 5 hours</option>
+            <option value="5-10">5-10 hours</option>
+            <option value="10-20">10-20 hours</option>
+            <option value="20+">20+ hours</option>
+        </select>
+
+        <!-- Age Input -->
+        <label class="w3-text-black">Enter your age:</label>
+        <input type="number" class="w3-input w3-border" ng-model="user.age" placeholder="e.g., 21" required>
+
+        <!-- Buttons -->
+        <div class="w3-center w3-margin-top">
+            <button type="button" class="w3-button w3-green w3-margin-right" ng-click="recommendGame()">Get Recommendation</button>
+            <button type="reset" class="w3-button w3-red" ng-click="resetForm()">Reset</button>
+        </div>
+    </form>
+
+    <!-- Result Section -->
+    <div class="w3-panel w3-pale-green w3-padding w3-round w3-margin-top" ng-show="result">
+        <p><strong>{{user.name}}, based on your preferences, we recommend:</strong> {{ result }}</p>
+    </div>
+
+    <!-- Flowchart -->
+    <h3 class="w3-center">Flowchart of the Decision Process</h3>
+    <img src="flowchart.png" alt="Flowchart of Video Game Recommendation Logic" class="w3-image w3-center">
+
+    <!-- Back to Portfolio Button -->
+    <div class="w3-center w3-margin-top">
+        <a href="../index.html" class="w3-button w3-gray">Back to Portfolio</a>
+    </div>
+</div>
+
+<!-- Custom AngularJS Script -->
+<script src="app.js"></script>
+
+</body>
+</html>
